@@ -31,6 +31,16 @@ public class Document {
         texte = leftPart + remplacement + rightPart;
     }
 
+    public void majuscules(int start, int end) {
+        if (start < 0 || start >= end || end > texte.length()) {
+            System.err.println("Indices non valides pour la mise en majuscules.");
+            return;
+        }
+
+        String portionEnMajuscules = texte.substring(start, end).toUpperCase();
+        remplacer(start, end, portionEnMajuscules);
+    }
+
 }
 
 
