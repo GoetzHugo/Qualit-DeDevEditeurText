@@ -18,7 +18,10 @@ public class CommandeRemplacer extends CommandeDocument {
         try {
             int depart = Integer.parseInt(parameters[1]);
             int fin = Integer.parseInt(parameters[2]);
-            String chaine = parameters[3];
+            String chaine = "";
+            if (parameters.length > 3){
+                chaine = parameters[3];
+            }
             String texteDocument = document.getTexte();
 
             if (depart < 0 || depart >= texteDocument.length() || fin <= depart || fin > texteDocument.length()) {
