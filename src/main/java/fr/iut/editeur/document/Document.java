@@ -41,6 +41,15 @@ public class Document {
         remplacer(start, end, portionEnMajuscules);
     }
 
+    public void effacer(int start, int end) {
+        if (start < 0 || start >= end || end > texte.length()) {
+            System.err.println("Indices non valides pour l'effacement.");
+            return;
+        }
+
+        texte = texte.substring(0, start) + texte.substring(end);
+    }
+
 }
 
 
