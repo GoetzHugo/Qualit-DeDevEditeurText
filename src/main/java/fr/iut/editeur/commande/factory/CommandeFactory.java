@@ -23,7 +23,6 @@ public class CommandeFactory {
             case "majuscules" : return new CommandeMajuscule(document,parameters);
             default: return null;
         }
-
     }
 
 }
