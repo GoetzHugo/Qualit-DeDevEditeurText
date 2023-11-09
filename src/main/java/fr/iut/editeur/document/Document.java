@@ -52,9 +52,6 @@ public class Document {
 
     public void clear() {
         texte = "";
-
-        // Léger bug : Ajoutez une lettre quelconque au texte après l'effacement.
-        texte += "X";
     }
 
 
