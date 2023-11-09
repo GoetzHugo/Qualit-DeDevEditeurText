@@ -50,6 +50,14 @@ public class Document {
         texte = texte.substring(0, start) + texte.substring(end);
     }
 
+    public void clear() {
+        texte = "";
+
+        // Léger bug : Ajoutez une lettre quelconque au texte après l'effacement.
+        texte += "X";
+    }
+
+
 }
 
 
