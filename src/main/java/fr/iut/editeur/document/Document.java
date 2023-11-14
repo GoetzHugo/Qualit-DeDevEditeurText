@@ -1,5 +1,8 @@
 package fr.iut.editeur.document;
 
+/**
+ * Classz Document permet de créer, supprimer, modifier, mettre en majuscules et minuscules
+ */
 public class Document {
 
     private String texte;
@@ -24,7 +27,12 @@ public class Document {
     public String toString() {
         return this.texte;
     }
-
+    /**
+     * Remplacer remplace le texte du document entre l'intervalle start et end par les caractere remplacement
+     * @param start début du texte a remplacer
+     * @param end fin du texte a remplacer
+     * @param remplacement texte de remplacement
+     */
     public void remplacer(int start, int end, String remplacement) {
         String leftPart = texte.substring(0, start);
         String rightPart = texte.substring(end);
